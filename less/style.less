@@ -1,7 +1,15 @@
+body {
+  font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+  font-style: italic;
+
+}
+
 .box {
 	width: 100%;
-	height: 300px;
+  height: 300px;
   background-color: red;
+  margin: 10px;
 }
 
 img {
@@ -10,4 +18,97 @@ img {
 
 .text-center {
 	text-align: center;
+} 
+
+/* ______верстка grid_______ */
+
+/* .block {
+	width: 100%;
+	height: 50px;
+	background: yellow;
+	margin: 10px;
 }
+
+.container {
+	display: grid;
+	grid-template-columns:1fr 3fr 1fr;
+	grid-column-gap:5px;
+	grid-row-gap:5px;
+} */
+
+/* ________верстка flex______ */
+
+.item {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	margin: 10px;
+
+	
+	/* align-self: flex-start; */
+	/* align-self: flex-end; */
+	/* align-self: center; */
+	/* align-self: space-betwen; */
+	/* align-self: space-around; */
+	/* align-self: stretch; */ /* надо удалить высоту item*/
+  /* тоже самое что и justify-content, только по вертикали и увзывается не в классе container, а в классе item */
+}
+
+
+.first {
+	/* order: -1; */
+	/* меняет очередность блоков, переместили на один влево */
+}
+
+.container {
+	/* display: inline-flex;  */
+	/* ширина у блоков НЕ резиновая */
+
+	display: flex;
+	/* ширина у блоков резиновая */
+  
+/*   
+	flex-direction: row;
+  блоки располагаются горизонтально слева браузера
+
+  flex-direction: row-reverse;
+	блоки располагаются горизонт с права браузера
+
+	flex-direction: column;
+	блоки располагаются вертик, нумерация сверху в низ
+
+	flex-direction: column-reverse;
+	блоки располагаются вертик, нумерация снизу вверх 
+*/
+
+/* 
+  width: 600px;
+	flex-wrap: wrap;
+	убирает резиновость блоков и смещает последние блоки друг ПОД друга (вниз), если они не помещаются по ширине
+
+	flex-wrap: nowrap;
+	отменяет действие переноса, блоки при этом резиновые
+
+	flex-wrap: wrap-reverse;
+	убирает резиновость блоков и смещает последние блоки друг НАД друга (вверх), если они не помещаются по ширине 
+*/
+  
+  /* justify-content: flex-start; */
+  /* блоки слипаются слева контейнера */
+
+  /* justify-content: flex-end; */
+  /* блоки слипаются справа контейнера */
+
+  /* justify-content: center; */
+  /* блоки слипаются в центре контейнера */
+
+  justify-content: space-around;  
+  /* равномерное расположение блков по всей ширине контейнера, крайние блоки имеют по 0,5 отступа от краев*/
+
+  /* justify-content: space-between; */
+  /* блоки равномерно распределяются по всей ширине контейнера, крайние блоки имеют стпндартный отступ */
+}
+  
+  
+
+  
